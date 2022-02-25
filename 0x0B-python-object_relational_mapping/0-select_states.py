@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Script that lists all 'states' from db 'hbtn_0e_0_usa'
 """
-import MySQLdb 
+import MySQLdb
 import sys
 
 
