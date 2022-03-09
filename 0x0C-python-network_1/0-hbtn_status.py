@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""import url status
+"""fetch url status
 """
 if __name__ == "__main__":
     import urllib.request
 
+    a = 'https://intranet.hbtn.io/status'
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
     print("Body response:")
