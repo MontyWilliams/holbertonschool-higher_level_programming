@@ -3,9 +3,6 @@
 """
 
 
-from base64 import decode
-
-
 if __name__ == "__main__":
     import urllib.request
     from urllib.parse import urlencode
