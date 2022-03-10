@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" this script fetches 
+""" this script fetches  a response from a url and checks for errors
 """
 
 
@@ -10,9 +10,9 @@ if __name__ == "__main__":
 
     url = Request(argv[1])
     try:
-        with urlopen() as reponse
+        with urlopen() as response:
             print(response.read().decode('utf-8'))
-    except HTTPError as error
+    except HTTPError as error:
         print("Error code: {}".format(error.code))
 
 
