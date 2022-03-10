@@ -2,11 +2,11 @@
 """fetch url status
 """
 if __name__ == "__main__":
-    import urllib.request
+    from  urllib import request
 
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    with request.urlopen('https://api.github.com/events') as response:
         html = response.read()
-    print("Body response:")
-    print("\t- type: {}".format(type(html)))
-    print("\t- content: {}".format(html))
-    print("\t- utf8 content: {}".format(html.decode('UTF8')))
+    # print("Body response:")
+    # print("\t- type: {}".format(type(html)))
+    # print("\t- content: {}".format(html))
+    # print("\t- utf8 content: {}".format(html.decode('UTF8')))
