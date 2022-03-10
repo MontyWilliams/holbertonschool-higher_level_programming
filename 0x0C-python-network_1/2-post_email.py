@@ -3,12 +3,17 @@
 """
 
 
+from base64 import decode
+
+
 if __name__ == "__main__":
-    from urllib import request
+    import urllib.request
+    from urllib.parse import urlencode
     import sys
 
     url = sys.argv[1]
     email = sys.argv[2]
     payload = {'email': email}
-    with request.urlopen(url, data=bytes(str(payload), 'utf-8')) as response:
-        print(str(response.read(), 'utf-8'))
+    Npayload = urlencode(payload).encode('utf-8')
+    with urllib.request.urlopen(url, Npayload) as response:
+        print(response.read().decode('utf-8'))
