@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """fetch url status
 """
-import urllib
+import urllib.request
+
 
 
 if __name__ == "__main__":
