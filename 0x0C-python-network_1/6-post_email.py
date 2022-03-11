@@ -8,12 +8,9 @@
 
 if __name__ == '__main__':
 
-    import requests
+    from requests import post
     from sys import argv
 
-    url = argv[1]
-    email = argv[2]
-
-    r = requests.post(url, data={'email': email})
-    if r.status_code == 400:
-        print(f"Error code: {r.status_code}")
+    email = {"email": argv[2]}
+    request = post(argv[1], email)
+    print(request.text)
