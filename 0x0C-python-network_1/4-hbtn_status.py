@@ -3,9 +3,6 @@
 """
 
 
-from cgitb import text
-
-
 if __name__ == '__main__':
     from requests import get
     from urllib import request
