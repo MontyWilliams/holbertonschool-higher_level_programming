@@ -5,10 +5,13 @@ script that fetches https://api.github.com/user
 
 
 if __name__ == "__main__":
-    from requests import get
     from sys import argv
+    from requests.auth import HTTPBasicAuth
+    import requests
 
-    requests = get('https://api.github.com/user',
-                   auth=(argv[1], argv[2]))
-    print(requests.json['id'])
+    token = sys.argv[2]
+    user = sys.argv[1]
+    url = "https://api.github.com/user"
 
+    r = requests.get(url, auth=HTTPBasicAuth(user, token)).json()
+    print(r.get('id'))
