@@ -3,11 +3,14 @@
 """
 
 
-if __name__ == '__main__':
-    import requests
+from cgitb import text
 
-    a = 'https://intranet.hbtn.io/status'
-    html = requests.get(a)
+
+if __name__ == '__main__':
+    from requests import get
+
+    request = get("https://intranet.hbtn.io/status")
+    text = request.text
     print("Body response:")
-    print("\t- type: {}".format(type(html.text)))
-    print("\t- content: {}".format(html.text))
+    print("\t- type: {}".format(type(text)))
+    print("\t- content: {}".format(text))
