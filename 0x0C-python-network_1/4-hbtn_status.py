@@ -8,6 +8,7 @@ from cgitb import text
 
 if __name__ == '__main__':
     from requests import get
+    from urllib import request
 
     request = get("https://intranet.hbtn.io/status")
     text = request.text
