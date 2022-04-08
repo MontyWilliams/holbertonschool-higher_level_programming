@@ -9,7 +9,7 @@ request(_url, (error, response, body) => {
     console.error(error);
   } else {
     const data = JSON.parse(body).results;
-    var count = 0;
+    let count = 0;
     for (const movies in data) {
       const characters = data[movies].characters;
       for (const charIndex in characters) {
@@ -18,5 +18,6 @@ request(_url, (error, response, body) => {
         }
       }
     }
+    console.log(count);
   }
 });
